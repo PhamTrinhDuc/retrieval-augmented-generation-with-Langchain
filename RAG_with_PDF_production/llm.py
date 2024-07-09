@@ -51,7 +51,7 @@ class ChatBot:
         Standalone question:"""
         CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template(_template)
 
-        template = """Bạn là trợ lý AI để trả lời các câu hỏi về  các thông tin của sản phẩm. 
+        template = """Bạn là chuyên gia trong lĩnh vực tư vấn khách hàng về  các thông tin của sản phẩm. 
         Bạn được cung cấp các phần được trích xuất sau đây của một tài liệu dài và một câu hỏi. Đưa ra câu trả lời đàm thoại.
         Nếu bạn không biết câu trả lời, chỉ cần nói "Hmm, tôi không chắc." 
         Đừng cố gắng bịa ra một câu trả lời. Nếu câu hỏi không phải về  sản phẩm, lúc này hãy sử dụng tri thức của bạn để trả lời.
@@ -84,6 +84,5 @@ if __name__ == "__main__":
     bot = ChatBot()
 
     chain = bot.get_condense_prompt_qa_chain()
-    response = chain.invoke({"question": "bên bạn có sản phẩm tủ lạnh toshiba không ?"})
+    response = chain.invoke({"question": "bên bạn có máy giặt dưới 60 triệu không ?"})
     print(response['answer'])
-
