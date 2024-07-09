@@ -14,9 +14,11 @@ import os
 
 DATA_DIR = "data/pdf_product.pdf"
 VECTOR_DB = "vector_db"
+MODEL_EMBEDDING_NAME = "BAAI/bge-small-en-v1.5"
+
 dotenv.load_dotenv()
 # Initialize Embeddings
-embedding = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
+embedding = FastEmbedEmbeddings(model_name=MODEL_EMBEDDING_NAME)
 
 def load_data():
     documents = None
@@ -43,7 +45,7 @@ def load_data():
         faiss_vectorstore.save_local(VECTOR_DB)
     else:
         faiss_vectorstore = FAISS.load_local(VECTOR_DB, embedding, allow_dangerous_deserialization=True)
-    faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs={"k": 2, "similarity_score": 0.6})
+    faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs={"k": 2, "similarity_score": 0.7})
 
     # fusion FAISS and BM25
     ensemble_retriever = EnsembleRetriever(retrievers=[faiss_retriever, bm25_retriever],
