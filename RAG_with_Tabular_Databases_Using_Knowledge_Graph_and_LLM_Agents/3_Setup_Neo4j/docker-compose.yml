@@ -1,0 +1,10 @@
+version: '33'
+
+services:
+  hospital_neo4j_etl:
+    build:
+      context: ./hospital_neo4j_etl
+    env_file:
+      - .env
+
+# Xóa docker contanier và docker image đi hẵnggggggg

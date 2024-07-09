@@ -1,0 +1,6 @@
+Fllow theo Architecture.png:
+
++ Ta bắt đầu biểu đồ từ Patient. 1 Patient HAS a Vist AT Hospital.(bệnh nhên tới khám tại bệnh viện)
++ Hospital employs Physician (bệnh viện thuê bác sĩ)
++ Physician TREAT Visit COVERED_BY Payer (bác sĩ điều trị cho lần khám đó và được trả bởi Payer)
++ Visit WRITES Review (bệnh nhên tới khám viết review tại bệnh viện) 

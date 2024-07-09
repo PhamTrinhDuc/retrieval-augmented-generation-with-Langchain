@@ -1,0 +1,12 @@
+langchain
+langchain-community
+llama-parse
+fastembed
+chromadb
+langchain-groq
+gradio
+fastembed
+faiss-cpu
+langchain-cohere
+unstructured
+rank_bm25

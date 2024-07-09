@@ -1,0 +1,11 @@
+[project]: Đây là bảng chứa các thông tin cơ bản về dự án.
+name = "hospital_neo4j_etl": Tên của dự án là hospital_neo4j_etl.
+version = "0.1": Phiên bản hiện tại của dự án là 0.1.
+dependencies: Danh sách các thư viện mà dự án phụ thuộc vào:
+"neo4j==5.14.1": Dự án cần thư viện neo4j phiên bản 5.14.1.
+"retry==0.9.2": Dự án cần thư viện retry phiên bản 0.9.2.
+
+[project.optional-dependencies]: Đây là bảng chứa các thông tin về các phụ thuộc tùy chọn của dự án.
+dev = ["black", "flake8"]: Danh sách các thư viện dùng cho môi trường phát triển:
+"black": Công cụ định dạng mã nguồn Python.
+"flake8": Công cụ kiểm tra mã nguồn Python để đảm bảo tuân thủ các quy tắc PEP 8.
