@@ -1,0 +1,14 @@
+langchain
+langchain-community
+langchain-groq
+langchain-cohere
+# llama-parse
+haystack-ai
+chromadb
+gradio
+unstructured
+rank_bm25
+pyprojroot
+python-dotenv
+pandas
+SQLAlchemy
