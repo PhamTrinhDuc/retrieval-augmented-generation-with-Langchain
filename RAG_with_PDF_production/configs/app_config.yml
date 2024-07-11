@@ -1,0 +1,17 @@
+directories:
+  persist_vector_directory: data/vector_db
+  data_csv_product_directory: data/product_csv.csv
+  data_pdf_product_directory: data/pdf_product.pdf
+  persist_db_directory: data/sql/product.db
+
+llm_config:
+  groq_model: llama3-70b-8192
+  temperature: 0.0
+  max_token: 512
+
+retriever_config:
+  similarity_score: 0.65
+  embedding_model: BAAI/bge-small-en-v1.5
+  top_k: 3
+  chunk_size: 512
+  chunk_overlap: 100
