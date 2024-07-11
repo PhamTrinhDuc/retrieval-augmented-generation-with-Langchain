@@ -1,12 +1,14 @@
 langchain
 langchain-community
-llama-parse
-fastembed
-chromadb
 langchain-groq
-gradio
-fastembed
-faiss-cpu
 langchain-cohere
+# llama-parse
+haystack-ai
+chromadb
+gradio
 unstructured
 rank_bm25
+pyprojroot
+python-dotenv
+pandas
+SQLAlchemy
